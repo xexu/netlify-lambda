@@ -1,0 +1,3 @@
+[build]
+    command = "npm run build:lambda" # your build command
+    functions = "./functions" # where your production ready lambda functions live AFTER your build command has run

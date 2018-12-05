@@ -1,0 +1,17 @@
+{
+  "name": "netlify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf functions && cp -r src/functions functions",
+    "start:lambda": "netlify-lambda serve src/functions",
+    "build:lambda": "netlify-lambda build src/functions"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "netlify-lambda": "^1.1.0"
+  }
+}
