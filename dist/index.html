@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div id="placeholder"></div>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                var placeholder = document.querySelector('#placeholder');
+                placeholder.textContent = xhr.response;
+            } else {
+                alert('something went wrong in the ajax request')
+            }
+        };
+
+        xhr.open('GET', '/.netlify/functions/hellow');
+        xhr.send();
+    });
+</script>
+</body>
+</html>
